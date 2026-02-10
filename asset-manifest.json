@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/gconnectsolution/static/css/main.58490351.css",
+    "main.js": "/gconnectsolution/static/js/main.494d09b7.js",
+    "static/js/453.1bf70a88.chunk.js": "/gconnectsolution/static/js/453.1bf70a88.chunk.js",
+    "static/media/ram-mandir-ayodhya.png": "/gconnectsolution/static/media/ram-mandir-ayodhya.f27fba7ba5fc2ebeeace.png",
+    "static/media/dance-bg.png": "/gconnectsolution/static/media/dance-bg.9c0779f67c10356b0e48.png",
+    "static/media/secretary.png": "/gconnectsolution/static/media/secretary.5721ace639b573cd5d40.png",
+    "static/media/founder.png": "/gconnectsolution/static/media/founder.bc90535772bafbd84c43.png",
+    "static/media/logo.png": "/gconnectsolution/static/media/logo.2f966bb3794d9e970c1f.png",
+    "index.html": "/gconnectsolution/index.html",
+    "main.58490351.css.map": "/gconnectsolution/static/css/main.58490351.css.map",
+    "main.494d09b7.js.map": "/gconnectsolution/static/js/main.494d09b7.js.map",
+    "453.1bf70a88.chunk.js.map": "/gconnectsolution/static/js/453.1bf70a88.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58490351.css",
+    "static/js/main.494d09b7.js"
+  ]
+}
