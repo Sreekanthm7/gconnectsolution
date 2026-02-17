@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import logo from "./assets/images/logo.png"
 import founderImg from "./assets/images/founder.png"
 import secretaryImg from "./assets/images/secretary.png"
@@ -9,6 +9,52 @@ import "./App.css"
 function App() {
   const [showModal, setShowModal] = useState(false)
 
+  // Left-side sparks: burst outward to the left & around
+  const leftSparks = useMemo(() => [
+    { dx: -80, dy: -10, c: "#e60033", d: 0, t: 2.2, s: 6 },
+    { dx: -70, dy: -50, c: "#e6a800", d: 0.1, t: 2, s: 7 },
+    { dx: -40, dy: -75, c: "#00b35a", d: 0.18, t: 2.1, s: 5 },
+    { dx: -10, dy: -80, c: "#0099cc", d: 0.06, t: 2.3, s: 6 },
+    { dx: -85, dy: 30, c: "#b300e6", d: 0.14, t: 2, s: 7 },
+    { dx: -55, dy: 60, c: "#e65c00", d: 0.22, t: 1.9, s: 5 },
+    { dx: -20, dy: 75, c: "#cca300", d: 0.08, t: 2.2, s: 6 },
+    { dx: -90, dy: -40, c: "#cc1440", d: 0.26, t: 2, s: 7 },
+    { dx: -60, dy: -65, c: "#9933ff", d: 0.12, t: 2.1, s: 5 },
+    { dx: -30, dy: 70, c: "#4db300", d: 0.2, t: 2.3, s: 6 },
+    // Wave 2
+    { dx: -95, dy: -20, c: "#cc0044", d: 1.1, t: 2.2, s: 5 },
+    { dx: -75, dy: -60, c: "#ccaa00", d: 1.18, t: 2, s: 6 },
+    { dx: -35, dy: -85, c: "#00a3a3", d: 1.14, t: 2.1, s: 7 },
+    { dx: -90, dy: 20, c: "#9900cc", d: 1.06, t: 2.3, s: 5 },
+    { dx: -50, dy: 65, c: "#cc7a00", d: 1.22, t: 1.9, s: 6 },
+    { dx: -15, dy: -85, c: "#e60000", d: 1.1, t: 2.2, s: 7 },
+    { dx: -80, dy: 50, c: "#00994d", d: 1.24, t: 2, s: 5 },
+    { dx: -65, dy: -55, c: "#0077b3", d: 1.16, t: 2.1, s: 6 },
+  ], [])
+
+  // Right-side sparks: burst outward to the right & around
+  const rightSparks = useMemo(() => [
+    { dx: 80, dy: -10, c: "#e60033", d: 0.05, t: 2.1, s: 6 },
+    { dx: 70, dy: -50, c: "#e6a800", d: 0.15, t: 2.2, s: 7 },
+    { dx: 40, dy: -75, c: "#00b35a", d: 0.22, t: 2, s: 5 },
+    { dx: 10, dy: -80, c: "#b300e6", d: 0.08, t: 2.3, s: 6 },
+    { dx: 85, dy: 30, c: "#0099cc", d: 0.18, t: 1.9, s: 7 },
+    { dx: 55, dy: 60, c: "#cc1440", d: 0.26, t: 2.2, s: 5 },
+    { dx: 20, dy: 75, c: "#e65c00", d: 0.1, t: 2, s: 6 },
+    { dx: 90, dy: -40, c: "#9933ff", d: 0.2, t: 2.1, s: 7 },
+    { dx: 60, dy: -65, c: "#cca300", d: 0.14, t: 2.3, s: 5 },
+    { dx: 30, dy: 70, c: "#e67300", d: 0.24, t: 1.9, s: 6 },
+    // Wave 2
+    { dx: 95, dy: -20, c: "#cc3366", d: 1.05, t: 2.2, s: 5 },
+    { dx: 75, dy: -60, c: "#ccaa00", d: 1.14, t: 2, s: 6 },
+    { dx: 35, dy: -85, c: "#9900cc", d: 1.2, t: 2.1, s: 7 },
+    { dx: 90, dy: 20, c: "#00a3a3", d: 1.1, t: 2.3, s: 5 },
+    { dx: 50, dy: 65, c: "#e60000", d: 1.18, t: 1.9, s: 6 },
+    { dx: 15, dy: -85, c: "#cc7a00", d: 1.06, t: 2.2, s: 7 },
+    { dx: 80, dy: 50, c: "#4db300", d: 1.22, t: 2, s: 5 },
+    { dx: 65, dy: -55, c: "#0077b3", d: 1.12, t: 2.1, s: 6 },
+  ], [])
+
   return (
     <div className="App">
       <header className="header">
@@ -17,7 +63,45 @@ function App() {
             <img src={logo} alt="Sri Rama Seva Pratishthan Logo" />
           </div>
           <div className="nav-text">
-            <span className="nav-brand">Sri RAMA SEVA PRATISHTAN</span>
+            <span className="nav-brand">
+              <span className="popup-crackers popup-left" aria-hidden="true">
+                {leftSparks.map((sp, i) => (
+                  <span
+                    key={i}
+                    className="pop-spark"
+                    style={{
+                      "--dx": sp.dx + "px",
+                      "--dy": sp.dy + "px",
+                      "--color": sp.c,
+                      "--delay": sp.d + "s",
+                      "--dur": sp.t + "s",
+                      "--size": sp.s + "px",
+                    }}
+                  />
+                ))}
+                <span className="pop-flash"></span>
+                <span className="pop-flash pop-flash-2"></span>
+              </span>
+              Sri RAMA SEVA PRATISHTAN
+              <span className="popup-crackers popup-right" aria-hidden="true">
+                {rightSparks.map((sp, i) => (
+                  <span
+                    key={i}
+                    className="pop-spark"
+                    style={{
+                      "--dx": sp.dx + "px",
+                      "--dy": sp.dy + "px",
+                      "--color": sp.c,
+                      "--delay": sp.d + "s",
+                      "--dur": sp.t + "s",
+                      "--size": sp.s + "px",
+                    }}
+                  />
+                ))}
+                <span className="pop-flash"></span>
+                <span className="pop-flash pop-flash-2"></span>
+              </span>
+            </span>
             <span className="nav-tagline">
               Jai Sri Ram — Ayodhya (UP), India
             </span>
