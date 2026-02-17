@@ -3,7 +3,7 @@ import logo from "./assets/images/logo.png"
 import founderImg from "./assets/images/founder.png"
 import secretaryImg from "./assets/images/secretary.png"
 import danceBg from "./assets/images/dance-bg.png"
-import mandirBanner from "./assets/images/ayodhya-ram-mandhir.png"
+import mandirBanner from "./assets/images/ram-mandir-ayodhya.png"
 import "./App.css"
 
 function App() {
@@ -17,8 +17,15 @@ function App() {
             <img src={logo} alt="Sri Rama Seva Pratishthan Logo" />
           </div>
           <div className="nav-text">
-            <span className="nav-brand">Sri Ramaseva Prathistana Trust</span>
-            <span className="nav-tagline">Jai Sri Ram — Ayodhya</span>
+            <span className="nav-brand">Sri RAMA SEVA PRATISHTAN</span>
+            <span className="nav-tagline">
+              Jai Sri Ram — Ayodhya (UP), India
+            </span>
+          </div>
+          <div className="nav-contact">
+            <a href="tel:+9199454 28886" className="nav-phone">
+              +91 99454 28886
+            </a>
           </div>
         </nav>
       </header>
@@ -38,9 +45,7 @@ function App() {
           <p className="hero-description">
             After 500 years of struggle, the Sri Ram Mandir has been constructed
             in Ayodhya, marking the realization of a long-cherished dream for
-            all Indians. The first anniversary celebration of Sri RamLalla's
-            installation will be held grandly worldwide as Sri Ramotsav in March
-            2026.
+            all Indians. And celebrating Sri Ramlalla Puraskar in 2026.
           </p>
           <a href="#about" className="hero-btn">
             Learn More
@@ -52,7 +57,7 @@ function App() {
         <h2 className="section-title">About Us</h2>
         <div className="about-content">
           <p>
-            For over a decade, Sri Ramaseva Prathistana Trust Ayodhya has been a
+            For over a decade, Sri Rama Seva Pratishtan Ayodhya has been a
             symbol of compassion and service, empowering communities and
             preserving India's rich cultural heritage.
           </p>
@@ -77,7 +82,7 @@ function App() {
               <img src={secretaryImg} alt="Secretary" />
             </div>
             <h3 className="team-name">Mr. Niranjan C. Jain</h3>
-            <p className="team-role">General Secretary</p>
+            <p className="team-role">Founder &amp; General Secretary</p>
             <p className="team-bio">
               A successful entrepreneur in real estate and construction. His
               leadership drives initiatives in education, healthcare, cultural
@@ -99,11 +104,10 @@ function App() {
         <div className="puraskar-overview">
           <h3 className="puraskar-heading">Event Overview</h3>
           <p className="puraskar-text">
-            To mark the historic anniversary of Sri Ram Mandir in Ayodhya, the
-            grand Sri Ramotsav celebration will be held worldwide in March 2026.
-            This landmark event honours the cultural and spiritual significance
-            of Lord Ram's homecoming — uniting millions across the globe in
-            devotion, service, and the celebration of India's rich heritage.
+            The Sri Ramlalla Puraskar Awards ceremony honors individuals and
+            organizations embodying the values of Sri Rama—devotion, integrity,
+            and service. This celebration recognizes significant contributions
+            to society
           </p>
         </div>
 
@@ -113,7 +117,14 @@ function App() {
           <div className="award-grid">
             <div className="award-card">
               <span className="award-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="36"
+                  height="36"
+                >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </span>
@@ -125,7 +136,14 @@ function App() {
             </div>
             <div className="award-card">
               <span className="award-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="36"
+                  height="36"
+                >
                   <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
                 </svg>
               </span>
@@ -137,7 +155,14 @@ function App() {
             </div>
             <div className="award-card">
               <span className="award-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="36"
+                  height="36"
+                >
                   <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
                   <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
                 </svg>
@@ -150,7 +175,14 @@ function App() {
             </div>
             <div className="award-card">
               <span className="award-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="36"
+                  height="36"
+                >
                   <path d="M12 22c4.97 0 9-2.69 9-6v-4c0-3.31-4.03-6-9-6s-9 2.69-9 6v4c0 3.31 4.03 6 9 6z" />
                   <path d="M12 10V2" />
                   <path d="M8 6l4-4 4 4" />
@@ -164,7 +196,14 @@ function App() {
             </div>
             <div className="award-card">
               <span className="award-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="36"
+                  height="36"
+                >
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
                   <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
                 </svg>
@@ -215,7 +254,14 @@ function App() {
           <div className="benefits-grid">
             <div className="benefit-card">
               <span className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="40" height="40">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="40"
+                  height="40"
+                >
                   <rect x="3" y="4" width="18" height="16" rx="2" />
                   <path d="M7 8h10M7 12h6" />
                   <circle cx="16" cy="16" r="2" />
@@ -228,7 +274,14 @@ function App() {
             </div>
             <div className="benefit-card">
               <span className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="40" height="40">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="40"
+                  height="40"
+                >
                   <circle cx="12" cy="12" r="10" />
                   <path d="M8 12l2.5 2.5L16 9" />
                 </svg>
@@ -240,7 +293,14 @@ function App() {
             </div>
             <div className="benefit-card">
               <span className="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="40" height="40">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  width="40"
+                  height="40"
+                >
                   <path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7" />
                   <path d="M18 9h1.5a2.5 2.5 0 000-5C17 4 17 7 17 7" />
                   <path d="M4 22h16" />
@@ -363,39 +423,21 @@ function App() {
               <a href="tel:+919945428886" className="call-btn">
                 +91 99454 28886
               </a>
-              <a href="tel:+919880548451" className="call-btn">
-                +91 98805 48451
-              </a>
             </div>
           </div>
 
           <div className="footer-address">
             <h3 className="footer-heading">Address</h3>
             <p className="footer-text">
-              #1, Hanuman Gufa, Faizabad Rural,
+              #1, Hanuman Gufa, Thilak Dwar, Naya Ghat,
               <br />
-              Ayodhya, UP - 224123
+              Ayodhya, UP. INDIA- 224123
             </p>
           </div>
 
           <div className="footer-links">
             <h3 className="footer-heading">Connect</h3>
-            <a
-              href="https://www.sriramaseva.com"
-              className="footer-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              www.sriramaseva.com
-            </a>
-            <a
-              href="https://www.sriramotsav.org"
-              className="footer-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              www.sriramotsav.org
-            </a>
+            <p>For more information connect with us in whatsapp or call. </p>
           </div>
         </div>
 
@@ -410,7 +452,7 @@ function App() {
       {/* Sticky action buttons */}
       <div className="sticky-btns">
         <a
-          href="https://wa.me/919980062415"
+          href="https://wa.me/9945428886"
           className="sticky-btn sticky-whatsapp"
           target="_blank"
           rel="noreferrer"
@@ -421,7 +463,7 @@ function App() {
           </svg>
         </a>
         <a
-          href="tel:+919980062415"
+          href="tel:+919945428886"
           className="sticky-btn sticky-call"
           aria-label="Call us"
         >

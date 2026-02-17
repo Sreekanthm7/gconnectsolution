@@ -70,6 +70,34 @@ html {
   font-weight: 500;
 }
 
+.nav-contact {
+  display: flex;
+  align-items: center;
+}
+
+.nav-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.2rem;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(211, 84, 0, 0.3);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.nav-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4);
+}
+
 /* Desktop: logo left, title centered */
 @media (min-width: 600px) {
   .header {
@@ -109,6 +137,13 @@ html {
   .nav-brand {
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  .nav-contact {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -443,7 +478,9 @@ html {
   padding: 1.8rem 1.2rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   border-top: 3px solid #e67e22;
 }
 
@@ -515,7 +552,9 @@ html {
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   position: relative;
   overflow: hidden;
 }
@@ -589,7 +628,9 @@ html {
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .benefit-card:hover {
@@ -948,8 +989,8 @@ html {
 }
 
 .sticky-btn {
-  width: 56px;
-  height: 56px;
+  width: 66px;
+  height: 66px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1011,6 +1052,15 @@ html {
 
   .nav-tagline {
     font-size: 1rem;
+  }
+
+  .nav-contact {
+    right: 2rem;
+  }
+
+  .nav-phone {
+    font-size: 0.95rem;
+    padding: 1.5rem 1.5rem;
   }
 
   .hero-content {
