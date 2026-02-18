@@ -10,50 +10,56 @@ function App() {
   const [showModal, setShowModal] = useState(false)
 
   // Left-side sparks: burst outward to the left & around
-  const leftSparks = useMemo(() => [
-    { dx: -80, dy: -10, c: "#e60033", d: 0, t: 2.2, s: 6 },
-    { dx: -70, dy: -50, c: "#e6a800", d: 0.1, t: 2, s: 7 },
-    { dx: -40, dy: -75, c: "#00b35a", d: 0.18, t: 2.1, s: 5 },
-    { dx: -10, dy: -80, c: "#0099cc", d: 0.06, t: 2.3, s: 6 },
-    { dx: -85, dy: 30, c: "#b300e6", d: 0.14, t: 2, s: 7 },
-    { dx: -55, dy: 60, c: "#e65c00", d: 0.22, t: 1.9, s: 5 },
-    { dx: -20, dy: 75, c: "#cca300", d: 0.08, t: 2.2, s: 6 },
-    { dx: -90, dy: -40, c: "#cc1440", d: 0.26, t: 2, s: 7 },
-    { dx: -60, dy: -65, c: "#9933ff", d: 0.12, t: 2.1, s: 5 },
-    { dx: -30, dy: 70, c: "#4db300", d: 0.2, t: 2.3, s: 6 },
-    // Wave 2
-    { dx: -95, dy: -20, c: "#cc0044", d: 1.1, t: 2.2, s: 5 },
-    { dx: -75, dy: -60, c: "#ccaa00", d: 1.18, t: 2, s: 6 },
-    { dx: -35, dy: -85, c: "#00a3a3", d: 1.14, t: 2.1, s: 7 },
-    { dx: -90, dy: 20, c: "#9900cc", d: 1.06, t: 2.3, s: 5 },
-    { dx: -50, dy: 65, c: "#cc7a00", d: 1.22, t: 1.9, s: 6 },
-    { dx: -15, dy: -85, c: "#e60000", d: 1.1, t: 2.2, s: 7 },
-    { dx: -80, dy: 50, c: "#00994d", d: 1.24, t: 2, s: 5 },
-    { dx: -65, dy: -55, c: "#0077b3", d: 1.16, t: 2.1, s: 6 },
-  ], [])
+  const leftSparks = useMemo(
+    () => [
+      { dx: -80, dy: -10, c: "#e60033", d: 0, t: 2.2, s: 6 },
+      { dx: -70, dy: -50, c: "#e6a800", d: 0.1, t: 2, s: 7 },
+      { dx: -40, dy: -75, c: "#00b35a", d: 0.18, t: 2.1, s: 5 },
+      { dx: -10, dy: -80, c: "#0099cc", d: 0.06, t: 2.3, s: 6 },
+      { dx: -85, dy: 30, c: "#b300e6", d: 0.14, t: 2, s: 7 },
+      { dx: -55, dy: 60, c: "#e65c00", d: 0.22, t: 1.9, s: 5 },
+      { dx: -20, dy: 75, c: "#cca300", d: 0.08, t: 2.2, s: 6 },
+      { dx: -90, dy: -40, c: "#cc1440", d: 0.26, t: 2, s: 7 },
+      { dx: -60, dy: -65, c: "#9933ff", d: 0.12, t: 2.1, s: 5 },
+      { dx: -30, dy: 70, c: "#4db300", d: 0.2, t: 2.3, s: 6 },
+      // Wave 2
+      { dx: -95, dy: -20, c: "#cc0044", d: 1.1, t: 2.2, s: 5 },
+      { dx: -75, dy: -60, c: "#ccaa00", d: 1.18, t: 2, s: 6 },
+      { dx: -35, dy: -85, c: "#00a3a3", d: 1.14, t: 2.1, s: 7 },
+      { dx: -90, dy: 20, c: "#9900cc", d: 1.06, t: 2.3, s: 5 },
+      { dx: -50, dy: 65, c: "#cc7a00", d: 1.22, t: 1.9, s: 6 },
+      { dx: -15, dy: -85, c: "#e60000", d: 1.1, t: 2.2, s: 7 },
+      { dx: -80, dy: 50, c: "#00994d", d: 1.24, t: 2, s: 5 },
+      { dx: -65, dy: -55, c: "#0077b3", d: 1.16, t: 2.1, s: 6 },
+    ],
+    [],
+  )
 
   // Right-side sparks: burst outward to the right & around
-  const rightSparks = useMemo(() => [
-    { dx: 80, dy: -10, c: "#e60033", d: 0.05, t: 2.1, s: 6 },
-    { dx: 70, dy: -50, c: "#e6a800", d: 0.15, t: 2.2, s: 7 },
-    { dx: 40, dy: -75, c: "#00b35a", d: 0.22, t: 2, s: 5 },
-    { dx: 10, dy: -80, c: "#b300e6", d: 0.08, t: 2.3, s: 6 },
-    { dx: 85, dy: 30, c: "#0099cc", d: 0.18, t: 1.9, s: 7 },
-    { dx: 55, dy: 60, c: "#cc1440", d: 0.26, t: 2.2, s: 5 },
-    { dx: 20, dy: 75, c: "#e65c00", d: 0.1, t: 2, s: 6 },
-    { dx: 90, dy: -40, c: "#9933ff", d: 0.2, t: 2.1, s: 7 },
-    { dx: 60, dy: -65, c: "#cca300", d: 0.14, t: 2.3, s: 5 },
-    { dx: 30, dy: 70, c: "#e67300", d: 0.24, t: 1.9, s: 6 },
-    // Wave 2
-    { dx: 95, dy: -20, c: "#cc3366", d: 1.05, t: 2.2, s: 5 },
-    { dx: 75, dy: -60, c: "#ccaa00", d: 1.14, t: 2, s: 6 },
-    { dx: 35, dy: -85, c: "#9900cc", d: 1.2, t: 2.1, s: 7 },
-    { dx: 90, dy: 20, c: "#00a3a3", d: 1.1, t: 2.3, s: 5 },
-    { dx: 50, dy: 65, c: "#e60000", d: 1.18, t: 1.9, s: 6 },
-    { dx: 15, dy: -85, c: "#cc7a00", d: 1.06, t: 2.2, s: 7 },
-    { dx: 80, dy: 50, c: "#4db300", d: 1.22, t: 2, s: 5 },
-    { dx: 65, dy: -55, c: "#0077b3", d: 1.12, t: 2.1, s: 6 },
-  ], [])
+  const rightSparks = useMemo(
+    () => [
+      { dx: 80, dy: -10, c: "#e60033", d: 0.05, t: 2.1, s: 6 },
+      { dx: 70, dy: -50, c: "#e6a800", d: 0.15, t: 2.2, s: 7 },
+      { dx: 40, dy: -75, c: "#00b35a", d: 0.22, t: 2, s: 5 },
+      { dx: 10, dy: -80, c: "#b300e6", d: 0.08, t: 2.3, s: 6 },
+      { dx: 85, dy: 30, c: "#0099cc", d: 0.18, t: 1.9, s: 7 },
+      { dx: 55, dy: 60, c: "#cc1440", d: 0.26, t: 2.2, s: 5 },
+      { dx: 20, dy: 75, c: "#e65c00", d: 0.1, t: 2, s: 6 },
+      { dx: 90, dy: -40, c: "#9933ff", d: 0.2, t: 2.1, s: 7 },
+      { dx: 60, dy: -65, c: "#cca300", d: 0.14, t: 2.3, s: 5 },
+      { dx: 30, dy: 70, c: "#e67300", d: 0.24, t: 1.9, s: 6 },
+      // Wave 2
+      { dx: 95, dy: -20, c: "#cc3366", d: 1.05, t: 2.2, s: 5 },
+      { dx: 75, dy: -60, c: "#ccaa00", d: 1.14, t: 2, s: 6 },
+      { dx: 35, dy: -85, c: "#9900cc", d: 1.2, t: 2.1, s: 7 },
+      { dx: 90, dy: 20, c: "#00a3a3", d: 1.1, t: 2.3, s: 5 },
+      { dx: 50, dy: 65, c: "#e60000", d: 1.18, t: 1.9, s: 6 },
+      { dx: 15, dy: -85, c: "#cc7a00", d: 1.06, t: 2.2, s: 7 },
+      { dx: 80, dy: 50, c: "#4db300", d: 1.22, t: 2, s: 5 },
+      { dx: 65, dy: -55, c: "#0077b3", d: 1.12, t: 2.1, s: 6 },
+    ],
+    [],
+  )
 
   return (
     <div className="App">
@@ -173,6 +179,102 @@ function App() {
               preservation, and disaster relief to uplift underprivileged
               communities.
             </p>
+          </div>
+        </div>
+
+        {/* ── Decade of Impact ── */}
+        <div className="covid-relief">
+          <h3 className="puraskar-heading">Decade of Impact</h3>
+          <div className="covid-grid">
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🌊</span>
+              <h4 className="covid-title">Bihar Flood 2008</h4>
+              <p className="covid-desc">
+                Emergency relief to 2.3 million affected people
+              </p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🎓</span>
+              <h4 className="covid-title">Educational Support</h4>
+              <p className="covid-desc">
+                Scholarships, supplies &amp; financial aid to students
+              </p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🏥</span>
+              <h4 className="covid-title">Healthcare Camps</h4>
+              <p className="covid-desc">
+                Free medical camps &amp; blood donation drives
+              </p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🪔</span>
+              <h4 className="covid-title">Cultural Programs</h4>
+              <p className="covid-desc">
+                Ramayana recitals, bhajan &amp; classical music
+              </p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🐄</span>
+              <h4 className="covid-title">Gau Seva</h4>
+              <p className="covid-desc">Food, medicine &amp; shelter</p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🤝</span>
+              <h4 className="covid-title">Prison Welfare</h4>
+              <p className="covid-desc">
+                Food &amp; support to inmates &amp; staff
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Covid-19 Pandemic Relief ── */}
+        <div className="covid-relief">
+          <h3 className="puraskar-heading">Covid-19 Pandemic Relief</h3>
+          <div className="covid-grid">
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">😷</span>
+              <h4 className="covid-title">20,000+ N95 Masks Distributed</h4>
+              <p className="covid-desc">
+                To frontline workers, police &amp; citizens (2020)
+              </p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🍽️</span>
+              <h4 className="covid-title">1,60,000+ Meals Served</h4>
+              <p className="covid-desc">Ensured no one slept hungry</p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🛣️</span>
+              <h4 className="covid-title">Highway Support</h4>
+              <p className="covid-desc">Food, water &amp; aid for migrants</p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">👮</span>
+              <h4 className="covid-title">100% Police Support</h4>
+              <p className="covid-desc">Masks &amp; safety gear distributed</p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">📹</span>
+              <h4 className="covid-title">Media Support</h4>
+              <p className="covid-desc">Rooftop facilities at press club</p>
+            </div>
+
+            <div className="covid-card">
+              <span className="covid-icon covid-emoji">🌍</span>
+              <h4 className="covid-title">Nepal N95 Masks Distributed</h4>
+              <p className="covid-desc">Masks &amp; essentials in Dhangadi</p>
+            </div>
           </div>
         </div>
       </section>
